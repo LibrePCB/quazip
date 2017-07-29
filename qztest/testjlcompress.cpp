@@ -139,14 +139,14 @@ void TestJlCompress::compressDir()
         if (!curDir.remove(zipName))
             QFAIL("Can't remove zip file");
     }
-    if (!createTestFiles(fileNames, "compressDir_tmp")) {
+    if (!createTestFiles(fileNames, -1, "compressDir_tmp")) {
         QFAIL("Can't create test files");
     }
 #ifdef Q_OS_WIN
     for (int i = 0; i < fileNames.size(); ++i) {
         if (fileNames.at(i).startsWith(".")) {
             QString fn = "compressDir_tmp\\" + fileNames.at(i);
-            SetFileAttributes(reinterpret_cast<LPCWSTR>(fn.utf16()),
+            SetFileAttributesW(reinterpret_cast<LPCWSTR>(fn.utf16()),
                               FILE_ATTRIBUTE_HIDDEN);
         }
     }
