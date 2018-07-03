@@ -4,9 +4,6 @@ QT += network testlib
 CONFIG += console
 CONFIG -= app_bundle
 
-# Set the path for the generated library
-GENERATED_DIR = ../../../generated
-
 # Use common project definitions
 include(../../../common.pri)
 

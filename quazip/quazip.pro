@@ -2,9 +2,6 @@ TEMPLATE = lib
 CONFIG += qt warn_on staticlib
 QT -= gui
 
-# Set the path for the generated library
-GENERATED_DIR = ../../../generated
-
 # Use common project definitions
 include(../../../common.pri)
 
