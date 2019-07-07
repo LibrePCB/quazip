@@ -31,6 +31,9 @@ DEFINES += QUAZIP_BUILD
 DEFINES+=QT_NO_CAST_FROM_ASCII
 DEFINES+=QT_NO_CAST_TO_ASCII
 
+# Disable deprecation warnings
+DEFINES+=QT_NO_DEPRECATED_WARNINGS
+
 # Input
 include(quazip.pri)
 

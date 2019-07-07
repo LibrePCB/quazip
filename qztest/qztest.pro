@@ -14,6 +14,9 @@ win32 {
     DEFINES += NOMINMAX
 }
 
+# Disable deprecation warnings
+DEFINES+=QT_NO_DEPRECATED_WARNINGS
+
 # Input
 HEADERS += qztest.h \
 testjlcompress.h \
