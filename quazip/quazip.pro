@@ -1,9 +1,20 @@
 TEMPLATE = lib
-CONFIG += qt warn_on staticlib
-QT -= gui
+TARGET = quazip
 
 # Use common project definitions
 include(../../../common.pri)
+
+QT -= gui
+
+CONFIG += qt warn_on
+
+# Support dynamic linking
+isEmpty(UNBUNDLE) {
+    CONFIG += staticlib
+} else {
+    target.path = $${PREFIX}/lib
+    INSTALLS += target
+}
 
 # The ABI version.
 
