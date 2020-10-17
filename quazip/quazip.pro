@@ -50,7 +50,7 @@ CONFIG(debug, debug|release) {
 unix:!symbian {
     headers.path=$$PREFIX/include/quazip
     headers.files=$$HEADERS
-    target.path=$$PREFIX/lib/$${LIB_ARCH}
+    target.path=$${LIBDIR}
     QMAKE_PKGCONFIG_DESTDIR = pkgconfig
     INSTALLS += headers target
 
