@@ -51,6 +51,7 @@ unix:!symbian {
     headers.path=$$PREFIX/include/quazip
     headers.files=$$HEADERS
     target.path=$$PREFIX/lib/$${LIB_ARCH}
+    LIBS += -lz
     QMAKE_PKGCONFIG_DESTDIR = pkgconfig
     INSTALLS += headers target
 
