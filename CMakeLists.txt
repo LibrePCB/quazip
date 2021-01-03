@@ -1,5 +1,10 @@
 # require 3.15 for GNUInstallDirs
-cmake_minimum_required(VERSION 3.15...3.18)
+#
+# Note: Upstream quazip requires version 3.15+, because of some features related
+# to the installation paths. See https://github.com/stachenov/quazip/issues/104
+# for details. In LibrePCB we don't install directly from the vendored repository,
+# so CMake 3.5+ should work fine.
+cmake_minimum_required(VERSION 3.5...3.18)
 
 project(QuaZip VERSION 1.1)
 
