@@ -16,6 +16,8 @@ jobs:
     strategy:
       matrix:
         runner:
+          - "ubuntu:16.04"  # cmake 3.5, qt 5.5
+          - "ubuntu:18.04"  # cmake 3.10, qt 5.9
           - "ubuntu:20.04"  # cmake 3.16, qt 5.12
           - "ubuntu:20.10"  # cmake 3.16, qt 5.14
     env:
@@ -32,7 +34,7 @@ jobs:
       - name: Show cmake version
         run: cmake --version
       - name: Run cmake
-        run: cmake -S . -B build -DQUAZIP_ENABLE_TESTS=ON
+        run: mkdir build && cd build && cmake .. -DQUAZIP_ENABLE_TESTS=ON
       - name: Build quazip
         run: cd build && VERBOSE=1 make -j8
       - name: Build tests
